@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: mofine;
+    src: url(../assets/fonts/mofine.otf),
+         
+}
+
+@font-face {
+    font-family: golant;
+    src: url(../assets/fonts/golant.otf);
+}
+
+
+
+:root {
+    --main-bg-color: #0B210F;
+    --secondary-bg-color: #FFFCED;
+    --main-text-color: #ffffff;
+    --secondary-text-color: #7bb46c;
+    --accent-color: #FD9B63;
+    --mofine: mofine, sans-serif;
+    --golant: golant, sans-serif;
+}
+
+
+
+@layer utilities{
+    .flex-center{
+        @apply flex items-center justify-center
+    }
+}
+
+.bg-main {
+    background-color: var(--main-bg-color);
+}
+.bg-secondary {
+    background-color: var(--secondary-bg-color);
+}
+
+.text-orange{
+    color: var(--accent-color);
+}
+.text-green{
+    color: var(--secondary-text-color);
+}
+
+.mofine {
+    font-family: var(--mofine);
+}
+.golant{
+    font-family: var(--golant);
+}
