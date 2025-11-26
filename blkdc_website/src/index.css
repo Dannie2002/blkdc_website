@@ -1,14 +1,21 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-@font-face {
-    font-family: mofine;
-    src: url(../assets/fonts/mofine.otf),
-         
+
+
+body {
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
 }
 
+
 @font-face {
-    font-family: golant;
-    src: url(../assets/fonts/golant.otf);
+    font-family: 'golant';
+    src: url('../src/Assets/Fonts/golant.otf');
+}
+@font-face {
+    font-family: 'noffixa';
+    src: url('../src/Assets/Fonts/noffixa.otf');
 }
 
 
@@ -16,20 +23,65 @@
 :root {
     --main-bg-color: #0B210F;
     --secondary-bg-color: #FFFCED;
-    --main-text-color: #ffffff;
-    --secondary-text-color: #7bb46c;
-    --accent-color: #FD9B63;
-    --mofine: mofine, sans-serif;
-    --golant: golant, sans-serif;
+    --main-text-color: #FD9B63;
+    --secondary-text-color: #5E936C;
+    --accent-color: #779673;
+    --dark-green:#184B24;
+    --font-golant: 'golant'; 
+    --font-noffixa: 'noffixa'
 }
 
 
 
-@layer utilities{
+@layer components{
     .flex-center{
-        @apply flex items-center justify-center
+        @apply flex items-center justify-center;
+    }
+
+    .cta-wrapper{
+        @apply relative z-20 cursor-pointer ;
+    }
+    .cta-button{
+        @apply px-3 py-3 rounded-lg bg-transparent border-2 border-[var(--accent-color)] flex items-center justify-center transition hover:border-none;
+    }
+    .text{
+        @apply font-semibold uppercase text-[14px];
+    }
+    .card{
+        @apply flex flex-col gap-4 p-6 items-start justify-start;
+        @apply lg:rounded-xl lg:gap-3;
+    }
+
+    .second-card{
+        @apply flex flex-col gap-2 p-6 rounded-xl items-center justify-start cursor-pointer;
+        @apply lg:rounded-xl transition-transform duration-300;
+        transform-origin: center;
+        will-change: transform;
+    }
+    
+    @media (min-width: 1024px) {
+        .second-card:hover{
+            transform: scale(1.05) !important;
+        }
+    }
+
+    .card-gradient{
+        background: linear-gradient(135deg, var(--secondary-bg-color) 0%, rgba(252, 251, 250, 0.1) 50%, var(--main-text-color) 100%);
+    }
+
+    .card-gradient-alt{
+        background: linear-gradient(135deg, rgba(253, 155, 99, 0.05) 0%, var(--secondary-bg-color) 50%, rgba(119, 150, 115, 0.08) 100%);
+    }
+
+    .card-gradient-warm{
+        background: linear-gradient(135deg, var(--secondary-bg-color) 0%, rgba(253, 155, 99, 0.08) 100%);
+    }
+
+    .card-gradient-cool{
+        background: linear-gradient(135deg, rgba(123, 180, 108, 0.1) 0%, var(--secondary-bg-color) 100%);
     }
 }
+
 
 .bg-main {
     background-color: var(--main-bg-color);
@@ -39,15 +91,47 @@
 }
 
 .text-orange{
-    color: var(--accent-color);
+    color: var(--main-text-color);
 }
+.bg-orange{
+    background-color: var(--accent-color);
+}
+
 .text-green{
     color: var(--secondary-text-color);
 }
 
-.mofine {
-    font-family: var(--mofine);
+.noffixa {
+    font-family: var(--font-noffixa);
 }
 .golant{
-    font-family: var(--golant);
+    font-family: var(--font-golant);
 }
+
+
+
+.btn-fill-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-fill-sweep > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-fill-sweep::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--accent-color), #FD9B63);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 400ms ease;
+    z-index: 0;
+  }
+  
+  .btn-fill-sweep:hover::before {
+    transform: scaleX(1);
+  }
+  

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import AboutUs from './Sections/AboutUs.jsx'
+import AboutUs from './sections/AboutUs.jsx'
+import ExecutiveManagement from './sections/ExecutiveManagement.jsx'
 
 
 
@@ -10,6 +11,7 @@ function App() {
     <>
 
   <AboutUs />
+  <ExecutiveManagement />
     </>
   )
 }
