@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Card = ({ children, className = "" }) => {
-  const cardRef = useRef(null);
+const cardRef = useRef(null);
 
   useEffect(() => {
     const el = cardRef.current;

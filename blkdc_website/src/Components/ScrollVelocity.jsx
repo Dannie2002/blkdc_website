@@ -44,8 +44,8 @@ export function ScrollVelocityContainer({
         {/* Gradient overlays */}
         {overlay && (
           <>
-            <div className="absolute inset-y-0 left-0 z-10 w-1/4 pointer-events-none bg-gradient-to-r from-[#F2EBDF] to-transparent"></div>
-            <div className="absolute inset-y-0 right-0 z-10 w-1/4 pointer-events-none bg-gradient-to-l from-[#F2EBDF] to-transparent"></div>
+            <div className="absolute inset-y-0 left-0 z-10 w-1/4 pointer-events-none bg-gradient-to-r from-transparent to-transparent"></div>
+            <div className="absolute inset-y-0 right-0 z-10 w-1/4 pointer-events-none bg-gradient-to-l from-transparent to-transparent"></div>
           </>
         )}
       </div>

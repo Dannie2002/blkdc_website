@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 
-const Button = ({ text, className = '', textClassName = '', id, onClick }) => {
+const Button = ({arrowClassName='', text, className = '', textClassName = '', id, onClick }) => {
 useEffect(() => {
   gsap.fromTo(
     ".arrow-button",
@@ -21,10 +21,10 @@ useEffect(() => {
 
     
   return (
-  <a className={`cta-wrapper group ${className}`} onClick={onClick} >
+  <a  className={`cta-wrapper group ${className}`} onClick={onClick} >
     <div className='cta-button btn-fill-sweep'>
       <p className={`text ${textClassName}`}>{text}</p>
-       <ArrowRight className='arrow-button w-5 h-5 ml-2 text-amber-500 z-10 group-hover:text-white' />
+       <ArrowRight className={`arrow-button w-5 h-5 ml-2 text-[#d99201] z-10 group-hover:text-white ${arrowClassName}` }/>
     </div>
    
   </a>
