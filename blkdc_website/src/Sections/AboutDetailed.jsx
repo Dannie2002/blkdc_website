@@ -3,14 +3,15 @@ import aboutimg from '../Assets/images/landingpage.jpg'
 import Card from '../Components/Card'
 import leadericon from '../Assets/images/leadership.svg'
 import { Eye, Target } from 'lucide-react'
+import ScrollReveal from '../Components/ScrollReveal'
 
 const AboutDetailed = () => {
   return (
-    <section className='min-h-screen bg-main border-t-1 border-t-[var(--accent-color)]'>
+    <section className='min-h-screen bg-main py-12'>
           {/* Header */}
-                    <div className="section-header"style={{ backgroundImage: `url(${Image})` }}>
+                    <div className="section-header"style={{ backgroundImage: `url(${aboutimg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                            <div className="absolute inset-0 bg-[#071e07]/60  h-full w-full z-0"/>
-                      <h1 className="text-2xl md:text-2xl lg:text-[40px] worky text-orange  mb-3 md:mb-4 z-10">
+                      <h1 className="text-2xl md:text-2xl lg:text-[20px] worky text-orange  mb-3 md:mb-4 z-10">
                         About Balaka District <span className=''>Council</span> 
                       </h1>
                       <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10">
@@ -29,14 +30,16 @@ const AboutDetailed = () => {
                     <img src={aboutimg} className='block' />
                 </div>
                  <div className='lg:w-1/2'>
-                    <p className='text-[#fffced]'>
+                   <ScrollReveal enableBlur='false' textClassName='text-[#ffffff] !text-[18px] text-center'>
                         Our goal is to go directly to the most affected communities and ensure 
                         that our people are 
                         being met with compassion, care, and consistency. With more than 100 active volunteers
                          contributing thousands of hours each year, their dedication
                           and compassion are at the heart of our meal distribution and
                          community engagement efforts
-                         </p>
+                   </ScrollReveal>
+                        
+                         
                  </div>
 
             </div>

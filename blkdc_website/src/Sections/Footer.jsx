@@ -1,4 +1,7 @@
 import React from 'react'
+import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Facebook, Instagram, Twitter } from 'lucide-react';
+import cofarm from '../assets/Images/mw_coat of arm.png'
+
 
 const Footer = () => {
   return (
@@ -9,16 +12,33 @@ const Footer = () => {
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-5'>
             <div className='col-span-2'>
-               <h1 className='text-green text-[22px] golant  mb-3'>About Us</h1>
-           <p className='tracking-[0.2px] text-[18px] text-[#0b0b0d]'>Our goal is to go directly to the most affected communities and ensure 
+               <div className='size-14 mb-2'>
+                <img className='h-full' src={cofarm} alt='Malawi coat of arm'/>
+                </div>
+                <h1 className='text-green text-[18px] worky  mb-2'>Balaka District Council</h1>
+           <p className='tracking-[0.2px] text-[16px] text-[#0b0b0d]'>Our goal is to go directly to the most affected communities and ensure 
                         that our people are 
-                        being met with compassion, care, and consistency. With more than 100 active volunteers
-                         contributing thousands of hours each year, their dedication
-                          and compassion are at the heart of our meal distribution and
-                         community engagement efforts</p>
+                        being met with compassion, care, and consistency. 
+                         </p>
+                         
+                         <div className='mt-4 text-green'>
+                            <h1 className='tracking-[6.5px] worky'>Follow Us on Social Media</h1>
+                            <div className=' flex  gap-6 mt-4'>
+                  <div className='size-10 flex-center text text-white backdrop-blur-3xl  border border-[#071e07]/20 rounded-xl'>
+                    <Facebook className="text-orange" />
+                  </div>
+                  <div className='size-10 text text-blue-400 flex-center backdrop-blur-3xl  border border-[#071e07]/20 rounded-xl'>
+                    <Instagram />
+                  </div>
+                  <div className='size-10 flex-center text text-green backdrop-blur-3xl  border border-[#071e07]/20 rounded-xl'>
+                    <Twitter />
+                  </div>
+                  
+                </div>
+                         </div>
             </div>
             <div className='col-span-1'>
-               <h1 className='text-green text-[22px] golant  mb-3'>Quick Links</h1>
+               <h1 className='text-green text-[16px] worky  mb-3'>Quick Links</h1>
                <ul className='flex flex-col gap-3'>
                 <li><a href='#'>Home</a></li>
                 <li><a href="">District Overview</a></li>
@@ -27,7 +47,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <h1 className='text-green text-[22px] golant  mb-3'>About Us</h1>
+                <h1 className='text-green text-[16px] worky  mb-3'>About Us</h1>
                <ul className='flex flex-col gap-3'>
                 <li><a href='#'>Management</a></li>
                 <li>District Overview</li>
@@ -36,7 +56,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                     <h1 className='text-green text-[22px] golant  mb-3'>About Us</h1>
+                     <h1 className='text-green text-[16px] worky  mb-3'>About Us</h1>
                <ul className='flex flex-col gap-3'>
                 <li><a href='#'>Management</a></li>
                 <li>District Overview</li>
@@ -52,7 +72,7 @@ const Footer = () => {
 
         </div>
         <hr className=''></hr>
-        <p className='text-[12px]'>developed by yours truly</p>
+        <p className='text-[12px] text-center py-6'>© 2025 Balaka District Council. All Rights Reserved.</p>
 
     </section>
   )

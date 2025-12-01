@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CardStart = ({ children, className = "" }) => {
+const CardStart = ({ children, className = "", style = {}, ...props }) => {
 const cardRef = useRef(null);
 
   useEffect(() => {
@@ -32,6 +32,8 @@ const cardRef = useRef(null);
     <div
       ref={cardRef}
       className={`card  ${className}`}
+      style={style}
+      {...props}
     >
       {children}
     </div>

@@ -52,13 +52,13 @@ const AboutUs = () => {
   return (
     <section className="bg-main min-h-screen ">
             {/* Header */}
-              <div className="section-header"style={{ backgroundImage: `url(${Executive})` }}>
+              <div className="section-header"style={{ backgroundImage: `url(${Executive})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                      <div className="absolute inset-0 bg-[#071e07]/60  h-full w-full z-0"/>
                 <h1 className="text-2xl md:text-2xl lg:text-[40px] worky text-orange  mb-3 md:mb-4 z-10">
-                  Contact <span className=''>Us</span> 
+                  About <span className=''>Us</span> 
                 </h1>
                 <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10">
-                  Have some questions? Feel free to contact us. We're here to help and would love to hear from you.
+                  Overview
                 </p>
               </div>
       <div className="wrapper mx-auto px-6 max-w-6xl py-2 lg:p-0">
@@ -71,9 +71,9 @@ const AboutUs = () => {
         >
           {/* Card 1 — Large Left Card */}
                <CardStart
-                className="relative col-span-1 lg:col-span-4 shadow-md hover:shadow-xl transition-scale duration-300  bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${aboutimg})` }}
+                className="relative card-gradient col-span-1 lg:col-span-4 shadow-md hover:shadow-xl transition-scale duration-300  bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${aboutimg})`,backgroundSize: 'cover', backgroundPosition: 'center' }}
               >
-              <div className="absolute inset-0 bg-[#0b0b0d]/30 rounded-xl h-full w-full z-0"/>
+              <div className="absolute inset-0 bg-[#0b0b0d]/60 rounded-xl h-full w-full z-0"/>
               <Target className="w-10 h-10 text-orange z-10" />
 
               <h4 className="z-10 golant text-orange text-3xl ">

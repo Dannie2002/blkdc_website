@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import leadericon from '../Assets/images/leadership.svg';
 import overviewicon from '../Assets/images/overview.svg';
 import  Image  from '../Assets/images/head.jpg';
+import ExcHeader from '../Assets/images/management_header.jpg'
 import Exc2 from '../Assets/images/Exc2.jpg'
 import Exc3 from '../Assets/images/Exc3.jpg'
 import Button from '../Components/Button';
@@ -10,6 +11,7 @@ import Card from '../Components/Card.jsx';
 import ProfileModal from '../Components/ProfileModal.jsx';
 import {LeadersData }from '../Constants/data.js';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowUpRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,9 +48,9 @@ const ExecutiveManagement = () => {
     }, []);
 
   return (
-    <section id='team' className="bg-main min-h-screen">
+    <section id='team' className="bg-main min-h-screen py-12">
             {/* Header */}
-              <div className="section-header"style={{ backgroundImage: `url(${Image})` }}>
+              <div className="section-header"style={{ backgroundImage: `url(${ExcHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                      <div className="absolute inset-0 bg-[#071e07]/60  h-full w-full z-0"/>
                 <h1 className="text-2xl md:text-2xl lg:text-[40px] worky text-orange  mb-3 md:mb-4 z-10">
                   Executive <span className=''>Management</span> 
@@ -62,23 +64,27 @@ const ExecutiveManagement = () => {
       <div className="wrapper mx-auto px-6 lg:max-w-6xl py-0">
    
     <div
-    ref={gridRef} className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:auto-rows-[450px] md:auto-rows-[400px] p-2">
+    ref={gridRef} className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:auto-rows-[420px] md:auto-rows-[400px] p-2">
       {LeadersData.map((LeadersData) => (
           <Card key={LeadersData.id} className="relative bg-[#F3E8D3]">
            <span className='absolute bottom-2 h-0.5 w-24 bg-(--accent-color)'></span>             
-           <div className=" w-58 h-58 rounded-full">
+           <div className=" w-68 h-68 rounded-full">
             <img  src={LeadersData.image} alt={LeadersData.name} className="size-full object-cover rounded-full" />
           </div>
-          <h3 className=" text text-xl font-semibold text-green">{LeadersData.name}</h3>
-          <p className="text-[#0b0b0d]">{LeadersData.position}</p>
-          <Button 
-            className="w-60 text-green text-center"
-            textClassName="group-hover:text-white"
-            text="View Profile" 
-            onClick={() => handleViewProfile(LeadersData)}
-          />
+          <div className='card-gradient-super backdrop-blur-3xl rounded-xl w-full p-4 flex items-center justify-between'>
+            <div>
+                <h3 className=" text text-3xl font-semibold text-[#f3e8d3]">{LeadersData.name}</h3>
+          <h4 className="text-[#fffced]">{LeadersData.position}</h4>
+            </div>
+        
+         <a onClick={() => handleViewProfile(LeadersData)} className='bg-secondary rounded-full p-2 flex items-center justify-center group transition-colors hover:bg-orange'>
+            <ArrowUpRight className='text-orange group-hover:text-white'/>
+         </a>
+
+          </div>
         </Card>
       ))}
+
 
     </div>
 

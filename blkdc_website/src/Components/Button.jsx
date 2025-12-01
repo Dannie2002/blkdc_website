@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 
@@ -7,9 +7,9 @@ const Button = ({arrowClassName='', text, className = '', textClassName = '', id
 useEffect(() => {
   gsap.fromTo(
     ".arrow-button",
-    { x: 0 },
+    { rotate: 0 },
     { 
-      x: 14,  
+      rotate: 45,  
       duration: 1.4,
       ease: "power2.inOut",
       repeat: -1,
@@ -24,7 +24,7 @@ useEffect(() => {
   <a  className={`cta-wrapper group ${className}`} onClick={onClick} >
     <div className='cta-button btn-fill-sweep'>
       <p className={`text ${textClassName}`}>{text}</p>
-       <ArrowRight className={`arrow-button w-5 h-5 ml-2 text-[#d99201] z-10 group-hover:text-white ${arrowClassName}` }/>
+       <ArrowUpRight className={`arrow-button w-6 h-6 ml-2 text-[#d99201] z-10 group-hover:text-white ${arrowClassName}` }/>
     </div>
    
   </a>
