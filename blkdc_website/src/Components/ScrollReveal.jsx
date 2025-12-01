@@ -49,9 +49,9 @@ const ScrollReveal = ({
         opacity: 1,
         y: 0,
         filter: "blur(0px)",
-        duration: 1.2, // slow-motion effect
+        duration: 0.2, // slow-motion effect
         ease: "power3.out",
-        stagger: 0.08, // small delay between words
+        stagger: 0.03, // small delay between words
         scrollTrigger: {
           trigger: el,
           scroller: scroller,

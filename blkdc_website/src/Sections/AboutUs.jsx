@@ -54,7 +54,7 @@ const AboutUs = () => {
             {/* Header */}
               <div className="section-header"style={{ backgroundImage: `url(${Executive})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                      <div className="absolute inset-0 bg-[#071e07]/60  h-full w-full z-0"/>
-                <h1 className="text-2xl md:text-2xl lg:text-[40px] worky text-orange  mb-3 md:mb-4 z-10">
+                <h1 className="text-2xl md:text-2xl lg:text-[27px] worky text-orange  mb-3 md:mb-4 z-10">
                   About <span className=''>Us</span> 
                 </h1>
                 <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10">

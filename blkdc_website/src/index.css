@@ -1,10 +1,11 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
 
 
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Geologica', sans-serif;
     scroll-behavior: smooth;
 }
 @font-face {
@@ -24,9 +25,9 @@ body {
 
 
 :root {
-    --main-bg-color: #1c201c;
-    --secondary-bg-color: #f3e8d3;
-    --main-text-color:#d99201;
+    --main-bg-color: #182420;
+    --secondary-bg-color: #e3ddd0;
+    --main-text-color:#f67707;
     --secondary-text-color: #5E936C;
     --accent-color: #779673;
     --dark-green:#184B24;
@@ -98,7 +99,7 @@ body {
         background: linear-gradient(90deg, var(--accent-color), #FD9B63);
     }
     .section-header{
-        @apply relative text-center mb-8 md:mb-12 h-54 flex-col items-center justify-center flex bg-no-repeat bg-cover;
+        @apply relative mb-8 md:mb-12 h-66 flex-col items-center justify-center flex bg-no-repeat bg-cover;
     }
     .contact-card{
         @apply transition-all duration-300;

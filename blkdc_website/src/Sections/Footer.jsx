@@ -11,18 +11,18 @@ const Footer = () => {
             
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-5'>
-            <div className='col-span-2'>
-               <div className='size-14 mb-2'>
+            <div className='col-span-2'>    
+                <h1 className='text-green text-[18px] worky  mb-2'>Balaka District Council</h1>
+                <div className='size-14 mb-2'>
                 <img className='h-full' src={cofarm} alt='Malawi coat of arm'/>
                 </div>
-                <h1 className='text-green text-[18px] worky  mb-2'>Balaka District Council</h1>
            <p className='tracking-[0.2px] text-[16px] text-[#0b0b0d]'>Our goal is to go directly to the most affected communities and ensure 
                         that our people are 
                         being met with compassion, care, and consistency. 
                          </p>
                          
-                         <div className='mt-4 text-green'>
-                            <h1 className='tracking-[6.5px] worky'>Follow Us on Social Media</h1>
+                         <div className='mt-4 text-orange'>
+                            <h1 className='tracking-[6.5px] text-[12px] worky'>Connect with us</h1>
                             <div className=' flex  gap-6 mt-4'>
                   <div className='size-10 flex-center text text-white backdrop-blur-3xl  border border-[#071e07]/20 rounded-xl'>
                     <Facebook className="text-orange" />

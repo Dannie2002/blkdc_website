@@ -19,7 +19,7 @@ const ContactUs = () => {
         <div className="section-header"style={{ backgroundImage: `url(${ContactHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                <div className="absolute inset-0 bg-[#071e07]/70  h-full w-full z-0"/>
                <img className='absolute h-full w-full opacity-10 bg-blend-multiply' src={noise} alt='noise' />
-          <h1 className="text-2xl md:text-2xl lg:text-[40px] worky text-orange  mb-3 md:mb-4 z-10">
+          <h1 className="text-2xl md:text-2xl lg:text-[27px] worky text-orange  mb-3 md:mb-4 z-10">
             Contact <span className=''>Us</span> 
           </h1>
           <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10">
@@ -80,7 +80,7 @@ const ContactUs = () => {
           <CardStart className="contact-card bg-secondary md:col-span-1 lg:col-span-1 row-span-1">
             <h1 className='golant text-orange text-2xl'>Postal Address</h1>
 
-               <div className='flex flex-col space-y-3'>
+               <div className='flex flex-col space-y-3 text-[#171104]'>
                 <h1>The District Commissioner</h1>
               <h1>Balaka District Council</h1>
               <p>Private Bag 1</p>

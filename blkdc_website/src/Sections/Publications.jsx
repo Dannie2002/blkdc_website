@@ -60,19 +60,20 @@ const Publications = () => {
     const currentContent = getContentByTab(activeCategory)
 
     return (
-        <section className="bg-main min-h-screen py-12">
+        <section className="relative card-gradient-super min-h-screen">
+            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 pointer-events-none"></div>
             
             {/* Header */}
             <div
-                className="section-header relative text-center py-24 rounded-xl"
+                className="section-header relative text-center py-24 "
                 style={{
                     backgroundImage: `url(${Publications_pc})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
             >
-                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm rounded-xl" />
-                <h1 className="relative text-[32px] font-semibold text-orange z-10">
+                <div className="absolute inset-0 bg-[#071e07]/70 backdrop-blur-sm " />
+                <h1 className="relative text-[27px] worky  text-orange z-10">
                     Media Center
                 </h1>
                 <p className="relative text-[#eceef1] max-w-2xl mx-auto mt-3 leading-relaxed z-10">
@@ -88,9 +89,9 @@ const Publications = () => {
                         <button
                             key={tab.id}
                             onClick={() => setActiveCategory(tab.name)}
-                            className={`px-5 py-2.5 rounded-xl text-sm golant md:text-base transition-all duration-300 backdrop-blur-md border
+                            className={`px-5 py-2 rounded-full text-sm golant md:text-base transition-all duration-300 backdrop-blur-md border
                                 ${activeCategory === tab.name
-                                    ? "bg-secondary border-white/30 text-green shadow-lg"
+                                    ? "bg-[#faf5eb] border-white/30 text-green shadow-lg"
                                     : "bg-white/10 border-white/10 text-gray-200 hover:bg-white/20 hover:border-white/30"
                                 }`}
                         >

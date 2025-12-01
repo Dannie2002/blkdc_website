@@ -2,6 +2,8 @@ import headImg from '../Assets/images/head.jpg';
 import exc2Img from '../Assets/images/Exc2.jpg';
 import exc3Img from '../Assets/images/Exc3.jpg';
 import exc4Img from '../Assets/images/Exc4.jpg';
+import aboutimg from '../Assets/images/landingpage.jpg';
+
 
 
 const about_content={
@@ -75,3 +77,18 @@ export const LeadersData = [
     ]
   }
 ];
+
+
+export const ongoingProjects = [
+  { id: 1, image: aboutimg, title: "Project 1" },
+  { id: 2, image: aboutimg, title: "Project 2" },
+  { id: 3, image: aboutimg, title: "Project 3" },
+];
+
+export const completedProjects = [
+  { id: 1, image: aboutimg, title: "Completed Project 1" },
+  { id: 2, image: aboutimg, title: "Completed Project 2" },
+  { id: 3, image: aboutimg, title: "Completed Project 3" },
+];
+
+export const allProjects = [...ongoingProjects, ...completedProjects];

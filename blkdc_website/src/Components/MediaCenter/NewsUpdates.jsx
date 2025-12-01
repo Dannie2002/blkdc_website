@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button";
+import { ArrowUpRight } from 'lucide-react';
 
 export default function NewsUpdates({ data }) {
   return (
@@ -10,7 +11,7 @@ export default function NewsUpdates({ data }) {
           className="bg-secondary rounded-xl overflow-hidden shadow-md hover:shadow-xl 
                      transition-all duration-300 cursor-pointer group"
         >
-          <div className="relative h-48 md:h-64 overflow-hidden">
+          <div className="relative h-48 md:h-48 overflow-hidden">
             <img
               src={item.image}
               alt={item.title}
@@ -24,8 +25,14 @@ export default function NewsUpdates({ data }) {
             <h3 className="text-base md:text-lg font-semibold text-[#1c201c] mb-4 line-clamp-3">
               {item.title}
             </h3>
+            <div className='card-gradient-super backdrop-blur-3xl rounded-xl w-full  p-4 flex items-center justify-between'>      
+              <h3 className="text-[16px] font-semibold text-[#f3e8d3]">Learn More</h3>
+         <a className='bg-secondary rounded-full p-2 flex items-center justify-center group transition-colors hover:bg-orange'>
+            <ArrowUpRight className='text-orange group-hover:text-white'/>
+         </a>
 
-            <Button text="Read More" className="w-full md:w-auto" textClassName="text-green group-hover:text-white" />
+          </div> 
+            
           </div>
         </div>
       ))}

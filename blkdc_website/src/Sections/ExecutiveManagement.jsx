@@ -48,32 +48,34 @@ const ExecutiveManagement = () => {
     }, []);
 
   return (
-    <section id='team' className="bg-main min-h-screen py-12">
+    <section id='team' className="relative card-gradient-super min-h-screen">
+      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 pointer-events-none"></div>
+
             {/* Header */}
               <div className="section-header"style={{ backgroundImage: `url(${ExcHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                     <div className="absolute inset-0 bg-[#071e07]/60  h-full w-full z-0"/>
-                <h1 className="text-2xl md:text-2xl lg:text-[40px] worky text-orange  mb-3 md:mb-4 z-10">
+                     <div className="absolute inset-0 bg-[#071e07]/70  h-full w-full z-0"/>
+                <h1 className="text-2xl md:text-2xl lg:text-[2`7px] worky text-orange  mb-3 md:mb-4 z-10">
                   Executive <span className=''>Management</span> 
                 </h1>
-                <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10">
+                <p className="text-center text-[#f7fefe] text-[20px] md:text-[22px] lg:text-[22px] max-w-4xl mx-auto leading-relaxed px-4 z-10">
                 Our Executive Management team brings a wealth of expertise and 
                 dedication to the service of Balaka District. Learn more 
                 about the individuals guiding our commitment to progress and good governance.
                 </p>
               </div>
-      <div className="wrapper mx-auto px-6 lg:max-w-6xl py-0">
+      <div className="wrapper mx-auto px-4 lg:max-w-6xl py-0">
    
     <div
     ref={gridRef} className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:auto-rows-[420px] md:auto-rows-[400px] p-2">
       {LeadersData.map((LeadersData) => (
-          <Card key={LeadersData.id} className="relative bg-[#F3E8D3]">
+          <Card key={LeadersData.id} className="relative bg-[#efece7]">
            <span className='absolute bottom-2 h-0.5 w-24 bg-(--accent-color)'></span>             
            <div className=" w-68 h-68 rounded-full">
             <img  src={LeadersData.image} alt={LeadersData.name} className="size-full object-cover rounded-full" />
           </div>
           <div className='card-gradient-super backdrop-blur-3xl rounded-xl w-full p-4 flex items-center justify-between'>
             <div>
-                <h3 className=" text text-3xl font-semibold text-[#f3e8d3]">{LeadersData.name}</h3>
+                <h3 className="text-[22px] font-semibold text-[#f1efeb]">{LeadersData.name}</h3>
           <h4 className="text-[#fffced]">{LeadersData.position}</h4>
             </div>
         
