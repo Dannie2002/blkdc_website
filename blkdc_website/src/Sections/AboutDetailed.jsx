@@ -7,11 +7,7 @@ import ScrollReveal from '../Components/ScrollReveal'
 
 const AboutDetailed = () => {
   return (
-<<<<<<< HEAD
-    <section className='min-h-screen card-gradient-super py-12'>
-=======
     <section id="about-detailed" className='min-h-screen bg-main py-12'>
->>>>>>> 10d54b3 (Improving the landing page)
           {/* Header */}
                     <div className="section-header"style={{ backgroundImage: `url(${aboutimg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                            <div className="absolute inset-0 bg-[#071e07]/60  h-full w-full z-0"/>
@@ -34,12 +30,8 @@ const AboutDetailed = () => {
                     <img src={aboutimg} className='block' />
                 </div>
                  <div className='lg:w-1/2'>
-<<<<<<< HEAD
-                   <ScrollReveal enableBlur='false' textClassName='text-[#fff2df] !text-[22px]  text-center'>
-=======
                  <h1 className='text-orange golant text text-center text-xl'>About Balaka District Council</h1>
                    <ScrollReveal enableBlur='false' textClassName='text-[#ffffff] !text-[18px] text-center'>
->>>>>>> 10d54b3 (Improving the landing page)
                         Our goal is to go directly to the most affected communities and ensure 
                         that our people are 
                         being met with compassion, care, and consistency.<span className='text-[#ff7700]'> With more than 100 active volunteers

@@ -2,12 +2,7 @@ import headImg from '../Assets/images/head.jpg';
 import exc2Img from '../Assets/images/Exc2.jpg';
 import exc3Img from '../Assets/images/Exc3.jpg';
 import exc4Img from '../Assets/images/Exc4.jpg';
-<<<<<<< HEAD
-import aboutimg from '../Assets/images/landingpage.jpg';
-
-=======
 import aboutimg from '../assets/images/landingpage.jpg'
->>>>>>> 10d54b3 (Improving the landing page)
 
 
 const about_content={
