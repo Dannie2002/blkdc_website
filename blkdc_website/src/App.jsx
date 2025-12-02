@@ -6,6 +6,9 @@ import AboutDetailed from './Sections/AboutDetailed.jsx'
 import Footer from './Sections/Footer.jsx'
 import Publications from './Sections/Publications.jsx'
 import Projects from './Sections/Projects.jsx'
+import LandingPage from './Sections/LandingPage.jsx'
+import MainHeader from './Components/MainHeader.jsx'
+
 
 
 
@@ -14,7 +17,8 @@ function App() {
 
   return (
     <>
-
+    <MainHeader />
+  <LandingPage />
   <AboutUs />
   <ExecutiveManagement />
   <AboutDetailed />

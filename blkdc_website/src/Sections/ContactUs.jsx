@@ -19,10 +19,14 @@ const ContactUs = () => {
         <div className="section-header"style={{ backgroundImage: `url(${ContactHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                <div className="absolute inset-0 bg-[#071e07]/70  h-full w-full z-0"/>
                <img className='absolute h-full w-full opacity-10 bg-blend-multiply' src={noise} alt='noise' />
+<<<<<<< HEAD
           <h1 className="text-2xl md:text-2xl lg:text-[27px] worky text-orange  mb-3 md:mb-4 z-10">
+=======
+          <h1 className="text-2xl md:text-2xl lg:text-[24px] worky text-orange  mb-3 md:mb-4 z-10">
+>>>>>>> 10d54b3 (Improving the landing page)
             Contact <span className=''>Us</span> 
           </h1>
-          <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10">
+          <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10 text-center">
             Have some questions? Feel free to contact us. We're here to help and would love to hear from you.
           </p>
         </div>
@@ -35,7 +39,7 @@ const ContactUs = () => {
           
           {/* Get in Touch Card - Tall card spanning 2 rows */}
           <CardStart className="contact-card flex items-center justify-center card-gradient-super overflow-hidden border border-[#f3e8d3]/30 md:col-span-1 lg:col-span-1 row-span-1">
-          <h1 className='golant text-[#f3e8d3] text-[20px]'>Balaka District Council<br/>Contact Details</h1>
+          <h1 className='golant text-[#f3e8d3] text-2xl'>Balaka District Council<br/>Contact Details</h1>
           {/*icons and adjacent text vertical wrapper*/}
           <div className='flex flex-col  items-start justify-center gap-2 lg:gap-3'>
 
@@ -77,10 +81,14 @@ const ContactUs = () => {
           </CardStart>
 
           {/* Quick Contact Card - Single row */}
-          <CardStart className="contact-card bg-secondary md:col-span-1 lg:col-span-1 row-span-1">
-            <h1 className='golant text-orange text-2xl'>Postal Address</h1>
+          <CardStart className="relative contact-card bg-secondary md:col-span-1 lg:col-span-1 row-span-1"> 
+            <h1 className='golant text-green text-2xl'>Postal Address</h1>
 
+<<<<<<< HEAD
                <div className='flex flex-col space-y-3 text-[#171104]'>
+=======
+               <div className='flex text-[#171104] flex-col space-y-3'>
+>>>>>>> 10d54b3 (Improving the landing page)
                 <h1>The District Commissioner</h1>
               <h1>Balaka District Council</h1>
               <p>Private Bag 1</p>
@@ -94,7 +102,7 @@ const ContactUs = () => {
           {/* Send Message Form - Wide card spanning 2 columns */}
           <Card className="card-gradient-super  md:col-span-2 lg:col-span-1 row-span-2 border-1  border-[#fffcee]/30">
            <Send className='w-10 h-10 text-orange' />
-       <h1 className='text-2xl golant text-[#fffced]'>Send Message</h1>
+       <h1 className='text-2xl golant text-[#f3e8d3]'>Send Message</h1>
     
       <SendMessageForm />
 

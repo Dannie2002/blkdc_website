@@ -4,37 +4,35 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Card = ({ children, className = "" }) => {
-const cardRef = useRef(null);
+const Card = ({ children, className = "", index = 0 }) => {
+  const cardRef = useRef(null);
 
   useEffect(() => {
     const el = cardRef.current;
 
     gsap.fromTo(
       el,
-      { opacity: 0, y: 90, scale: 0.95 },
+      { opacity: 0, y: 90 },
       {
         opacity: 1,
         y: 0,
-        scale: 1,
-        duration: 1.1,
-        ease: "power3.out",
+        duration: 0.8,
+        ease: "expo.out",
+        delay: index * 0.2,   // ← stagger based on index
         scrollTrigger: {
-        trigger: el,
-        start: "top 85%",     // when card enters viewport
-        toggleActions: "play none none none",
+          trigger: el,
+          start: "top 95%",
+          toggleActions: "play none none none",
         },
       }
     );
-  }, []);
+  }, [index]);
 
   return (
-    <div
-      ref={cardRef}
-      className={`second-card  ${className}`}
-    >
+    <div ref={cardRef} className={`second-card ${className}`}>
       {children}
     </div>
   );
-}
+};
+
 export default Card;

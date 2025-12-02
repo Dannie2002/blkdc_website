@@ -4,8 +4,13 @@ import {
   allProjects,
   ongoingProjects,
   completedProjects,
+<<<<<<< HEAD
 } from "../Constants/data.js";
 import ProjectList from "../Components/Projects/ProjectList.jsx";
+=======
+} from "../Constants/data";
+import ProjectList from "../Components/Projects/ProjectList";
+>>>>>>> 10d54b3 (Improving the landing page)
 import aboutimg from "../Assets/images/landingpage.jpg";
 
 export default function Projects() {
@@ -26,7 +31,11 @@ export default function Projects() {
   const currentContent = getContentByTab(activeCategory);
 
   return (
+<<<<<<< HEAD
     <section className="min-h-screen bg-main py-12">
+=======
+    <section className="min-h-screen card-gradient-super">
+>>>>>>> 10d54b3 (Improving the landing page)
       
       {/* Header */}
       <div
@@ -39,11 +48,19 @@ export default function Projects() {
       >
         <div className="absolute inset-0 bg-[#071e07]/60 z-0" />
 
+<<<<<<< HEAD
         <h1 className="text-2xl md:text-3xl text-orange mb-3 z-10 relative">
           Projects Overview
         </h1>
 
         <p className="text-[#eceef1] max-w-xl mx-auto px-4 z-10 relative">
+=======
+        <h1 className="text-2xl md:text-3xl lg:text-[22px] worky text-orange mb-3 z-10 relative">
+          Projects Overview
+        </h1>
+
+        <p className="text-center text-[#eceef1] max-w-xl mx-auto px-4 z-10 relative">
+>>>>>>> 10d54b3 (Improving the landing page)
           Explore our ongoing and completed development initiatives across
           Balaka District.
         </p>
@@ -58,10 +75,17 @@ export default function Projects() {
             <button
               key={tab}
               onClick={() => setActiveCategory(tab)}
+<<<<<<< HEAD
               className={`px-5 py-2.5 rounded-xl text-sm md:text-base transition-all duration-300 backdrop-blur-md border 
                 ${
                   activeCategory === tab
                     ? "bg-secondary border-white/30 text-green shadow-lg"
+=======
+              className={`px-5 py-2.5 rounded-full text-sm md:text-base transition-all duration-300 backdrop-blur-md border 
+                ${
+                  activeCategory === tab
+                    ? "bg-[#828282] border-white/30 text-white shadow-lg"
+>>>>>>> 10d54b3 (Improving the landing page)
                     : "bg-white/10 border-white/10 text-gray-200 hover:bg-white/20"
                 }`}
             >
