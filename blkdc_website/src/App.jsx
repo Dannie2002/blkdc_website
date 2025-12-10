@@ -8,6 +8,7 @@ import Publications from './Sections/Publications.jsx'
 import Projects from './Sections/Projects.jsx'
 import LandingPage from './Sections/LandingPage.jsx'
 import MainHeader from './Components/MainHeader.jsx'
+import Services from './Sections/Services.jsx'
 
 
 
@@ -19,12 +20,12 @@ function App() {
     <>
     <MainHeader />
   <LandingPage />
-  <AboutUs />
   <ExecutiveManagement />
   <AboutDetailed />
   <ContactUs />
   <Publications />
   <Projects />
+  <Services />
   <Footer />
     </>
   )

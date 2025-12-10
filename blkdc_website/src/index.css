@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
-=======
 @import "tailwindcss";
 
->>>>>>> 10d54b3 (Improving the landing page)
 
 
 
@@ -14,8 +11,8 @@ body {
     scroll-behavior: smooth;
 }
 @font-face {
-    font-family: 'worky';
-    src: url('../src/Assets/Fonts/worky.otf');
+    font-family: 'horizon';
+    src: url('../src/Assets/Fonts/horizon.ttf');
 }
 
 @font-face {
@@ -26,25 +23,28 @@ body {
     font-family: 'noffixa';
     src: url('../src/Assets/Fonts/noffixa.otf');
 }
+ @font-face {
+    font-family: 'pasbile';
+    src: url('../src/Assets/Fonts/pasbile.otf');
+ }
 
 
 
 :root {
-<<<<<<< HEAD
+
     --main-bg-color: #182420;
     --secondary-bg-color: #e3ddd0;
     --main-text-color:#f67707;
-=======
     --main-bg-color: #201f1c;
     --secondary-bg-color: #F4E9D7;
-    --main-text-color:#ffaa00;
->>>>>>> 10d54b3 (Improving the landing page)
-    --secondary-text-color: #5E936C;
-    --accent-color: #779673;
+    --main-text-color:#a3cae7;
+    --secondary-text-color: #37755b;
+    --accent-color: #7dfd58;
     --dark-green:#184B24;
     --font-golant: 'golant'; 
     --font-noffixa: 'noffixa';
-    --font-worky: 'worky';
+    --font-horizon: 'horizon';
+    --font-pasbile: 'pasbile';
 }
 
 
@@ -53,8 +53,12 @@ body {
     .flex-center{
         @apply flex items-center justify-center;
     }
-      .text-gradient-orange {
-    @apply bg-[linear-gradient(to_right,#f14014,#ff5515_50%,#ff6929)] bg-clip-text text-transparent;
+      .text-gradient-blue {
+    @apply bg-[linear-gradient(to_right,#4880b1,#669fca_50%,#a3cae7)] bg-clip-text text-transparent;
+
+    .blue-button {
+        @apply bg-[linear-gradient(to_right,#4880b1,#669fca_50%,#a3cae7)];
+    }
   }
 
     .cta-wrapper{
@@ -73,20 +77,19 @@ body {
         @apply font-semibold uppercase text-[14px];
     }
     .card{
-        @apply flex flex-col rounded-[14px] gap-4 p-6 items-start justify-start;
+        @apply flex flex-col rounded-[14px] gap-4 p-8 shadow-lg hover:translate-y-1 transition-all duration-300 items-start justify-start;
         @apply  lg:gap-3;
     }
 
     .second-card{
-        @apply flex flex-col space-y-6 px-4 py-4 rounded-[14px] items-center justify-center cursor-pointer;
-        @apply lg:rounded-xl lg:px-4 lg:py-2 lg:space-y-4 transition-transform duration-300;
-        transform-origin: center;
-        will-change: transform;
+        @apply flex flex-col space-y-6 p-8 shadow-lg hover:shadow-xl rounded-[14px] items-center justify-center cursor-pointer;
+        @apply lg:rounded-xl lg:px-8 lg:py-6 lg:space-y-4 transition-all duration-300;
+        
     }
     
     @media (min-width: 1024px) {
         .second-card:hover{
-            transform: scale(1.05) !important;
+            transform: translateY(-5.02px) !important;
         }
     }
 
@@ -107,17 +110,15 @@ body {
     }
 
     .card-gradient-super{
-        @apply bg-[radial-gradient(circle_at_top_left,#779673_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#B8C4A9_0%,#1c201c_0%)]
+        @apply bg-[radial-gradient(circle_at_top_left,#a3cae7_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#B8C4A9_0%,#1c201c_0%)]
     }
     .bg-button{
         background: linear-gradient(90deg, var(--accent-color), #FD9B63);
     }
     .section-header{
-<<<<<<< HEAD
         @apply relative mb-8 md:mb-12 h-66 flex-col items-center justify-center flex bg-no-repeat bg-cover;
-=======
         @apply relative  md:mb-12 h-54 flex-col items-center justify-center flex;
->>>>>>> 10d54b3 (Improving the landing page)
+
     }
     .contact-card{
         @apply transition-all duration-300;
@@ -145,10 +146,8 @@ body {
     }
 
     .text-input{
-        @apply mb-4 w-full px-4 focus:bg-[#e0ffc2]/20 py-2 rounded bg-transparent text-[#fffced] border border-[#e1dcc3]/60 focus:outline-none focus:ring-1 focus:ring-[#fffced]/30
+        @apply mb-4 w-full px-4 focus:bg-[#f6f6f7]/20 py-2 rounded bg-[#f6f6f7] text-[#fffced] border border-[#4a4a4a]/60 focus:outline-none focus:ring-1 focus:ring-[#fffced]/30
     }
-
-
 
 .bg-main {
     background-color: var(--main-bg-color);
@@ -174,8 +173,12 @@ body {
 .golant{
     font-family: var(--font-golant);
 }
-.worky{
-    font-family: var(--font-worky);
+.horizon{
+    font-family: var(--font-horizon);
+}
+
+.pasbile{
+    font-family: var(--font-pasbile);
 }
 
 
@@ -194,7 +197,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, var(--accent-color), #FD9B63);
+    background: #003521;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 400ms ease;
@@ -205,3 +208,11 @@ body {
     transform: scaleX(1);
   }
   
+  @keyframes shine {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

@@ -5,7 +5,7 @@ const SendMessageForm = (className="") => {
     <div className='w-full'>
          <form className=''>
         <div className='mb-4 flex flex-col gap-1'>
-          <label className='text-[#fffced]'>Name</label>
+          <label className='text-[#4a4a4a]'>Name:</label>
             <input
             className="text-input"
             type="text"
@@ -13,8 +13,8 @@ const SendMessageForm = (className="") => {
             name="name"
         
           />
-             <label className="block text-[#fffced]" htmlFor="email">
-            Email
+             <label className="block text-[#4a4a4a]" htmlFor="email">
+            Email:
           </label>
              <input
             className="text-input"
@@ -22,11 +22,11 @@ const SendMessageForm = (className="") => {
             id="email"
             name="email"
           />
-           <label className="block mb-1 text-[#fffced]" htmlFor="message">
-            Message
+           <label className="block mb-1 text-[#4a4a4a]" htmlFor="message">
+            Message:
           </label>
           <textarea
-            className="w-full px-4 py-2 rounded  border-[#e1dcc3] bg-[#F3E8D3]/90 text-[#0b0b0d] border-none focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]  resize-none"
+            className="w-full px-4 py-2 rounded  border-[#4a4a4a]/40 bg-[#f6f6f7]/90 text-[#0b0b0d] border focus:outline-none focus:ring-2 focus:ring-[#f6f6f7]/20  resize-none"
             id="message"
             name="message"
             rows={8}

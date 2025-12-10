@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Facebook, Instagram, Twitter,ArrowUpRight } from 'lucide-react';
 import Card from '../Components/Card.jsx';
 import Button from '../Components/Button.jsx';
 import FilledButton from'../Components/FilledButton.jsx';
@@ -10,16 +10,18 @@ import ContactHeader from '../assets/Images/Contact_us.jpg'
 import noise from '../Assets/images/noise.png'
 import{ ScrollVelocityContainer, ScrollVelocityRow } from "../Components/ScrollVelocity.jsx";
 import CardStart from '../Components/CardStart.jsx';
+import { motion } from 'framer-motion';
 
 const ContactUs = () => {
 
   return (
-    <section className="bg-main min-h-screen py-12">
+    <section className="bg-[radial-gradient(circle_at_top_left,#fdfffb_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#d9d9d9_0%,#fdfffb_0%)] min-h-screen pb-12 relative">
+
              {/* Header */}
         <div className="section-header"style={{ backgroundImage: `url(${ContactHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-               <div className="absolute inset-0 bg-[#071e07]/70  h-full w-full z-0"/>
+               <div className="absolute inset-0 bg-[#003521]/70  h-full w-full z-0"/>
                <img className='absolute h-full w-full opacity-10 bg-blend-multiply' src={noise} alt='noise' />
-          <h1 className="text-2xl md:text-2xl lg:text-[24px] worky text-orange  mb-3 md:mb-4 z-10">
+          <h1 className="text-2xl md:text-2xl lg:text-[82px] horizon uppercase text-[#fffced]   mb-3 md:mb-4 z-10">
             Contact <span className=''>Us</span> 
           </h1>
           <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10 text-center">
@@ -31,23 +33,23 @@ const ContactUs = () => {
  
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12 auto-rows-[300px] md:auto-rows-[250px] lg:auto-rows-[320px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-12 auto-rows-[300px] md:auto-rows-[250px] lg:auto-rows-[320px]">
           
           {/* Get in Touch Card - Tall card spanning 2 rows */}
-          <CardStart className="contact-card flex items-center justify-center card-gradient-super overflow-hidden border border-[#f3e8d3]/30 md:col-span-1 lg:col-span-1 row-span-1">
-          <h1 className='golant text-[#f3e8d3] text-2xl'>Balaka District Council<br/>Contact Details</h1>
+          <CardStart className="contact-card bg-[#003521] overflow-hidden border border-[#f3e8d3]/30 md:col-span-1 lg:col-span-1 row-span-1">
+          <h1 className='pasbile text-[#fffced] text-2xl'>Balaka District Council<br/>Contact Details</h1>
           {/*icons and adjacent text vertical wrapper*/}
           <div className='flex flex-col  items-start justify-center gap-2 lg:gap-3'>
 
                 <div className='flex flex-center gap-3'>
                   <div className='lg:size-12 size-10 flex-center backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
-                      <Phone className='text-orange '/>  
+                      <Phone className='text-[#ff9600]'/>  
                   </div>
                   <h1 className='text-[#f3e8de] lg:text-[16px] text-[14px] tracking-wider'>+265 99 171 3866</h1>
                 </div>
                 <div className='flex  flex-center gap-3'>
                   <div className='size-10 lg:size-12 flex-center backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
-                      <Mail className='text-orange'/>  
+                      <Mail className='text-[#ff9600]'/>  
                   </div>
                   <p className='text-[#f3e8de] lg:text-[16px] text-[14px] font-extralight tracking-wider'>info@balakadc.com</p>
                 </div>
@@ -56,11 +58,11 @@ const ContactUs = () => {
           <ScrollVelocityContainer className=''>
             <ScrollVelocityRow baseVelocity={14} className='lg:p-0'>
               <div className=' flex  gap-6 min-w-[400px]'>
-                  <div className='lg:size-14 size-14 flex-center text text-white backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
-                    <Facebook className="text-orange" />
+                  <div className='lg:size-14 size-14 flex-center text text-white bg-white backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
+                    <Facebook className="text-[#1877F2]" />
                   </div>
-                  <div className='lg:size-14 size-14 text text-blue-400 flex-center backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
-                    <Instagram />
+                  <div className='lg:size-14 size-14 text bg-white flex-center backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
+                    <Instagram  className='text-[#1877F2] text-3xl'/>
                   </div>
                   <div className='lg:size-14 size-14 flex-center text text-green backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
                     <Twitter />
@@ -77,8 +79,8 @@ const ContactUs = () => {
           </CardStart>
 
           {/* Quick Contact Card - Single row */}
-          <CardStart className="relative contact-card bg-secondary md:col-span-1 lg:col-span-1 row-span-1"> 
-            <h1 className='golant text-green text-2xl'>Postal Address</h1>
+          <CardStart className="relative contact-card border border-[#4a4a4a]/30 md:col-span-1 lg:col-span-1 row-span-1"> 
+            <h1 className='pasbile text-[#003521] text-2xl'>Find Us</h1>
 
                <div className='flex text-[#171104] flex-col space-y-3'>
                 <h1>The District Commissioner</h1>
@@ -92,18 +94,21 @@ const ContactUs = () => {
           </CardStart>
 
           {/* Send Message Form - Wide card spanning 2 columns */}
-          <Card className="card-gradient-super  md:col-span-2 lg:col-span-1 row-span-2 border-1  border-[#fffcee]/30">
-           <Send className='w-10 h-10 text-orange' />
-       <h1 className='text-2xl golant text-[#f3e8d3]'>Send Message</h1>
-    
+          <Card className=" md:col-span-2 lg:col-span-1 row-span-2 border-1  border-[#4a4a4a]/30">
+           <Send className='w-10 h-10 text-[#003521]' />
+       <h1 className='text-2xl golant text-[#003521]'>Send Message</h1>
+
       <SendMessageForm />
 
-        <FilledButton
-         className='w-full text-[#fee8d3] mt-3'
-         text="Send Message"
-         textClassName="group-hover:text-white"
-         arrowClassName='text-[#f3e8d3]'
-       />
+             <motion.a  
+         className='mt-4 golant lg:text-[18px] text-center text-[#ffffff] tracking-wide bg-[linear-gradient(to_right,#4880b1,#669fca_50%,#a3cae7)] rounded-[12px] px-[20px] py-[12px] flex items-center justify-center w-48 group hover:bg-[#B8C4A9] transition duration-700 ease-in-out mx-auto lg:mx-0'
+         initial={{ opacity: 0, x: -60 }}
+         animate={{ opacity: 1, x: 0 }}
+         transition={{ duration: 0.5, delay: 1.8, ease: "easeInOut" }}
+       >
+         Learn More
+         <ArrowUpRight className='ml-2 text-[#fffced] group-hover:text-white'/>
+       </motion.a>
          
           </Card>
 <Card className="contact-card bg-secondary md:col-span-2 lg:col-span-2 row-span-1 !p-0">

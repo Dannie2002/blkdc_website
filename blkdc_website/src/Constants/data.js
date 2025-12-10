@@ -17,7 +17,7 @@ export const LeadersData = [
   {
     id: 1,
     name: "Dr. David Msiska",
-    position: "Mayor",
+    position: "Director of Public Works",
     image: headImg,
     biography: [
       "Dr. David Msiska has served as Mayor of Balaka District Council since 2019, bringing over 15 years of experience in public administration and community development. He holds a PhD in Public Administration from the University of Malawi.",
@@ -28,7 +28,7 @@ export const LeadersData = [
   {
     id: 2,
     name: "Jane Smith",
-    position: "Deputy Mayor",
+    position: "Senior Accountant",
     image: exc2Img,
     biography: [
       "Jane Smith serves as Deputy Mayor and has been a dedicated public servant for over 12 years. She specializes in social services and community welfare programs, ensuring that the needs of all residents are met with compassion and efficiency.",

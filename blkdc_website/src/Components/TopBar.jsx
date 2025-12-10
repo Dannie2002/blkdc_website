@@ -13,7 +13,7 @@ const TopBar = () => {
   };
 
   return (
-    <div className="bg-[#184B24] text-white px-4 lg:px-12 py-2 relative z-50">
+    <div className="bg-[#003521] text-[#fffced] px-4 lg:px-12 py-2 relative z-50">
       <div className="mx-auto flex items-center justify-between">
         {/* Left Side: Contact Info */}
         <div className="hidden md:flex items-center gap-6 text-sm">
@@ -35,7 +35,7 @@ const TopBar = () => {
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="bg-white/20 rounded-full py-1.5 pl-4 pr-10 text-sm text-white placeholder-gray-300 focus:outline-none focus:bg-white/30 transition-colors"
+              className="bg-[#005434] rounded-full py-1.5 pl-4 pr-10 text-sm text-[#ffffff] placeholder-gray-300 focus:outline-none focus:bg-white/30 transition-colors"
             />
             <button type="submit" aria-label="Submit search" className="absolute right-3 top-1/2 -translate-y-1/2 text-white">
               <Search size={18} />

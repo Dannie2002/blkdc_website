@@ -60,7 +60,7 @@ const Publications = () => {
     const currentContent = getContentByTab(activeCategory)
 
     return (
-        <section className="card-gradient-super min-h-screen py-12">
+        <section className="bg-[radial-gradient(circle_at_top_left,#d9d9d9_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#d9d9d9_0%,#fdfffb_0%)] min-h-screen pb-12">
             
             {/* Header */}
             <div
@@ -71,8 +71,8 @@ const Publications = () => {
                     backgroundPosition: "center",
                 }}
             >
-               <div className="absolute inset-0 bg-[#071e07]/70  h-full w-full z-0"/>
-                <h1 className="relative lg:text-[22px] worky text-orange z-10">
+         <div className="absolute inset-0 bg-[#003521]/70  h-full w-full z-0"/>
+                <h1 className="relative lg:text-[72px] horizon text-[#fffced] z-10 uppercase">
                     Media Center
                 </h1>
                 <p className="relative text-[#eceef1] max-w-2xl mx-auto mt-3 leading-relaxed z-10">
@@ -90,8 +90,8 @@ const Publications = () => {
                             onClick={() => setActiveCategory(tab.name)}
                             className={`px-5 py-2 rounded-full text-sm golant md:text-base transition-all duration-300 backdrop-blur-md border
                                 ${activeCategory === tab.name
-                                    ? "bg-[#F4E9D7] border-white/30 text-green shadow-lg"
-                                    : "bg-white/10 border-white/10 text-gray-200 hover:bg-white/20 hover:border-white/30"
+                                    ? "bg-[#003521] border-white/30 text-[#ffffff] shadow-lg"
+                                    : "bg-white/10 border-white/10 text-[#4a4a4a] hover:bg-white/20 hover:border-white/30"
                                 }`}
                         >
                             {tab.name}

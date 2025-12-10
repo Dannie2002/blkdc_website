@@ -38,7 +38,7 @@ const ImageSlider = ({
         )}
         <div className="relative z-20 h-full">
           {/* Placeholder for content when no slides are available */}
-          <div className="items-start justify-center h-full flex flex-col lg:px-24 lg:space-y-6"></div>
+          <div className="justify-center h-full flex flex-col text-center lg:text-left lg:px-24 lg:space-y-6"></div>
         </div>
       </div>
     );
@@ -46,7 +46,7 @@ const ImageSlider = ({
 
   return (
     <div
-      className={`relative h-full w-full overflow-hidden ${className}`}
+      className={`relative h-full= w-full overflow-hidden ${className}`}
       style={{ perspective: '1000px' }}
     >
       {overlay && (
@@ -59,7 +59,7 @@ const ImageSlider = ({
           src={images[prev]}
           alt="slide"
           className={`absolute inset-0 h-full w-full object-cover ${direction === 'up' ? 'slider-exit-up' : 'slider-exit-down'}`}
-          style={{ zIndex: 0 }}
+          style={{ zIndex: 0, objectFit: 'cover', backgroundRepeat: 'no-repeat' }}
         />
       )}
 
@@ -70,7 +70,7 @@ const ImageSlider = ({
           src={images[current]}
           alt="slide"
           className="absolute inset-0 h-full w-full object-cover slider-enter"
-          style={{ zIndex: 0 }}
+          style={{ zIndex: 0, objectFit: 'cover', backgroundRepeat: 'no-repeat' }}
         />
       )}
 
@@ -83,8 +83,8 @@ const ImageSlider = ({
             animate={{ opacity: 1, y: 0 }} // Animate to visible state
             exit={{ opacity: 0, y: -20 }} // Exit animation
             transition={{ duration: 0.5, ease: "easeInOut" }} // Transition for the content container
-            // Apply the layout classes here, as this div now directly contains the content
-            className="items-start justify-center h-full flex flex-col lg:px-24 lg:space-y-6"
+            // We use text-center for mobile and lg:text-left for larger screens.
+            className="justify-center items-start h-full max-w-6xl flex flex-col text-center lg:text-left mx-auto lg:space-y-6"
           >
             {currentSlide?.content}
           </motion.div>

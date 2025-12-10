@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import Logo from '../assets/Images/mw_coat of arm.png'
 
 function cn(...classes) {
   return classes
@@ -45,13 +46,13 @@ export function NavBody({ children, className, visible }) {
         boxShadow: visible
           ? "0 0 24px rgba(34,42,53,0.06), 0 1px 1px rgba(0,0,0,0.05), 0 0 0 1px rgba(34,42,53,0.04), 0 0 4px rgba(34,42,53,0.08), 0 16px 68px rgba(47,48,55,0.05), 0 1px 0 rgba(255,255,255,0.1) inset"
           : "none",
-        width: visible ? "60%" : "100%",
+        width: visible ? "80%" : "100%",
         y: visible ? 20 : 0,
       }}
       transition={{ type: "spring", stiffness: 200, damping: 50 }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between px-12 py-2 lg:flex pointer-events-auto",
-        visible ? "bg-white/80 dark:bg-neutral-950/80" : "bg-[#eeebe5]",
+        "relative z-[60] backdrop-blur-3xl mx-auto hidden w-full flex-row items-center justify-between px-12 py-2 lg:flex pointer-events-auto",
+        visible ? "bg-[#fdfffb]/90 dark:bg-neutral-950/80" : "bg-[#fdfffb]", visible ? "rounded-[2px]" : "rounded-none",
         className
       )}
     >
@@ -67,7 +68,7 @@ export function NavItems({ items = [], className, onItemClick }) {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "hidden flex-1 flex-row items-center justify-center gap-4 text-sm font-medium text-zinc-600 hover:text-zinc-800 lg:flex",
+        "hidden flex-1 flex-row items-center justify-center gap-4 text-[14px] font-medium text-zinc-600 hover:text-zinc-800 lg:flex",
         className
       )}
     >
@@ -75,7 +76,7 @@ export function NavItems({ items = [], className, onItemClick }) {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 transition-colors duration-200 dark:text-neutral-300"
+          className="relative px-4 py-2 text-[#4a4a4a] hover:text-[#073802] golant transition-colors duration-200 dark:text-[#b8afa6]"
           key={idx}
           href={item.link}
         >
@@ -102,12 +103,12 @@ export function MobileNav({ children, className, visible }) {
       }}
       animate={{
         width: visible ? "92%" : "100%",
-        borderRadius: visible ? "16px" : "2rem",
+        borderRadius: visible ? "0px" : "0px",
         y: visible ? 12 : 0,
       }}
       transition={{ type: "spring", stiffness: 220, damping: 45 }}
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-1.5rem)] flex-col items-center justify-between bg-transparent py-2 lg:hidden pointer-events-auto",
+        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-1.5rem)] flex-col items-center justify-between bg-[#fdfffb] p-2 lg:hidden pointer-events-auto",
         className
       )}
     >
@@ -170,9 +171,9 @@ export function MobileNavToggle({ isOpen, onClick }) {
 
 export function NavbarLogo() {
   return (
-    <a href="#" className="relative z-20 flex flex-shrink-0 items-center space-x-2 px-2 py-1">
-      <img src="https://assets.aceternity.com/logo-dark.png" alt="logo" width={30} height={30} />
-      <span className="font-medium text-[#177A96] dark:text-white">Startup</span>
+    <a href="#" className="relative z-20 flex justify-center flex-shrink-0 items-center space-x-2 px-2 py-1">
+      <img src={Logo} alt="logo" width={30} height={30} />
+      <span className="text-[20px] text-[#003521] golant dark:text-white">Balaka District Council</span>
     </a>
   );
 }
@@ -182,10 +183,10 @@ export function NavbarButton({ href, children, className, variant = "primary" })
     "inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-bold transition-transform duration-200 active:scale-95";
 
   const variants = {
-    primary: "bg-white text-[#0b0b0d] shadow-md hover:-translate-y-0.5 dark:bg-white/90 dark:text-black",
+    primary: "bg-[#] text-[#0b0b0d] shadow-md hover:-translate-y-0.5 dark:bg-white/90 dark:text-black",
     secondary: "bg-transparent text-neutral-800 hover:text-[#177A96] dark:text-white",
     dark: "bg-[#0b0b0d] text-white shadow-md hover:-translate-y-0.5",
-    gradient: "bg-gradient-to-r from-[#177A96] via-[#38bdf8] to-[#5176A3] text-white shadow-inner hover:shadow-lg",
+    gradient: "bg-[linear-gradient(to_right,#779673,#779673_50%,#5E936C)] text-white shadow-inner hover:shadow-lg",
   };
 
   return (
