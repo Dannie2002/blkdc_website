@@ -9,8 +9,9 @@ import Projects from './Sections/Projects.jsx'
 import LandingPage from './Sections/LandingPage.jsx'
 import MainHeader from './Components/MainHeader.jsx'
 import Services from './Sections/Services.jsx'
-
-
+import NewsInDetails from './Sections/NewsInDetails.jsx'
+import Sectors from './Sections/Sectors.jsx'
+import DistrictOverview from './Sections/DistrictOverview.jsx'
 
 
 function App() {
@@ -24,8 +25,11 @@ function App() {
   <AboutDetailed />
   <ContactUs />
   <Publications />
+  <NewsInDetails />
   <Projects />
   <Services />
+  <Sectors />
+  <DistrictOverview />
   <Footer />
     </>
   )

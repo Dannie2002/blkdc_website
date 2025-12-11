@@ -60,7 +60,7 @@ const Publications = () => {
     const currentContent = getContentByTab(activeCategory)
 
     return (
-        <section className="bg-[radial-gradient(circle_at_top_left,#d9d9d9_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#d9d9d9_0%,#fdfffb_0%)] min-h-screen pb-12">
+        <section className="bg-[radial-gradient(circle_at_top_left,#fdfffb_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#d9d9d9_0%,#fdfffb_0%)] min-h-screen pb-12">
             
             {/* Header */}
             <div

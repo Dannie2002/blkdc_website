@@ -46,7 +46,7 @@ const Services = () => (
     <div className="wrapper mx-auto px-4 lg:max-w-6xl">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, idx) => (
-          <div key={idx} className="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center border border-[#e6e7f5] hover:shadow-lg transition">
+          <div key={idx} className="bg-[#f7f7f7] border-t-8 border-t-[#0e580f] rounded-xl shadow-md p-8 flex flex-col items-center text-center border border-[#e6e7f5] hover:shadow-lg transition">
             {service.icon}
             <h3 className="text-lg text-[#003521] mb-2 pasbile">{service.title}</h3>
             <p className="text-[#4a4a4a] text-[16px] leading-relaxed">{service.description}</p>

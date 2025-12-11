@@ -43,13 +43,13 @@ const ContactUs = () => {
 
                 <div className='flex flex-center gap-3'>
                   <div className='lg:size-12 size-10 flex-center backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
-                      <Phone className='text-[#ff9600]'/>  
+                      <Phone className='text-[#fffced]'/>  
                   </div>
                   <h1 className='text-[#f3e8de] lg:text-[16px] text-[14px] tracking-wider'>+265 99 171 3866</h1>
                 </div>
                 <div className='flex  flex-center gap-3'>
                   <div className='size-10 lg:size-12 flex-center backdrop-blur-3xl  border border-[#fffced]/20 rounded-xl'>
-                      <Mail className='text-[#ff9600]'/>  
+                      <Mail className='text-[#fffced]'/>  
                   </div>
                   <p className='text-[#f3e8de] lg:text-[16px] text-[14px] font-extralight tracking-wider'>info@balakadc.com</p>
                 </div>
@@ -79,7 +79,7 @@ const ContactUs = () => {
           </CardStart>
 
           {/* Quick Contact Card - Single row */}
-          <CardStart className="relative contact-card border border-[#4a4a4a]/30 md:col-span-1 lg:col-span-1 row-span-1"> 
+          <CardStart className="relative contact-card border bg-[#f7f7f7] border-[#4a4a4a]/30 md:col-span-1 lg:col-span-1 row-span-1"> 
             <h1 className='pasbile text-[#003521] text-2xl'>Find Us</h1>
 
                <div className='flex text-[#171104] flex-col space-y-3'>
@@ -94,21 +94,21 @@ const ContactUs = () => {
           </CardStart>
 
           {/* Send Message Form - Wide card spanning 2 columns */}
-          <Card className=" md:col-span-2 lg:col-span-1 row-span-2 border-1  border-[#4a4a4a]/30">
+          <Card className=" md:col-span-2 lg:col-span-1 row-span-2 border-1 bg-[#f7f7f7] border-[#4a4a4a]/30">
            <Send className='w-10 h-10 text-[#003521]' />
        <h1 className='text-2xl golant text-[#003521]'>Send Message</h1>
 
       <SendMessageForm />
-
-             <motion.a  
-         className='mt-4 golant lg:text-[18px] text-center text-[#ffffff] tracking-wide bg-[linear-gradient(to_right,#4880b1,#669fca_50%,#a3cae7)] rounded-[12px] px-[20px] py-[12px] flex items-center justify-center w-48 group hover:bg-[#B8C4A9] transition duration-700 ease-in-out mx-auto lg:mx-0'
-         initial={{ opacity: 0, x: -60 }}
-         animate={{ opacity: 1, x: 0 }}
-         transition={{ duration: 0.5, delay: 1.8, ease: "easeInOut" }}
-       >
-         Learn More
-         <ArrowUpRight className='ml-2 text-[#fffced] group-hover:text-white'/>
-       </motion.a>
+         <motion.a  
+         
+                  className='mt-4 golant lg:text-[17px] text-center text-[#003521] tracking-wide bg-transparent border hover:border-none hover:text-[#fffced] border-[#003521] rounded-[12px] px-[20px] py-[12px] flex items-center justify-center w-48 group btn-fill-sweep hover:-translate-y-2 transition duration-300 ease-in-out mx-auto lg:mx-0'
+                 initial={{ opacity: 0, x: -60 }}
+                 animate={{ opacity: 1, x: 0 }}
+                 transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
+                              >
+               <span className="group-hover:text-white">Send Message</span>
+             <ArrowUpRight className='ml-2 text-[#003521] group-hover:text-white'/>
+           </motion.a>
          
           </Card>
 <Card className="contact-card bg-secondary md:col-span-2 lg:col-span-2 row-span-1 !p-0">

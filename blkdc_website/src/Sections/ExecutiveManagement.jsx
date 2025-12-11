@@ -6,7 +6,7 @@ import  Image  from '../Assets/images/head.jpg';
 import ExcHeader from '../Assets/images/management_header.jpg'
 import Exc2 from '../Assets/images/Exc2.jpg'
 import Exc3 from '../Assets/images/Exc3.jpg'
-import Button from '../Components/Button';
+import FilledButton from '../Components/FilledButton.jsx';
 import Card from '../Components/Card.jsx';
 import ProfileModal from '../Components/ProfileModal.jsx';
 import {LeadersData }from '../Constants/data.js';
@@ -37,13 +37,13 @@ const ExecutiveManagement = () => {
     <section id='team' className="bg-[radial-gradient(circle_at_top_left,#fdfffb_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#d9d9d9_0%,#fdfffb_0%)] pb-24 min-h-screen">
             {/* Header */}
               {/* Added h-64 for a fixed height */}
-              <div
-  className="section-header h-64 md:h-80 lg:h-[400px] border-b-2 border-[#4a4a4a]/20 relative flex items-center justify-center"
->
+              
+<div className="section-header"style={{ backgroundImage: `url(${ExcHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
      <h1 className="lg:text-[72px] text-[34px] text-center uppercase golant text-[#fffced] mb-8 z-10">Executive Management</h1>
   <div className="absolute inset-0 bg-[#003521]/60 z-0" />
   {/* Optional: Add a title or content here */}
 </div>
+
       <div className="wrapper mx-auto px-4 lg:max-w-6xl  py-0">
 
     <div
@@ -55,17 +55,11 @@ const ExecutiveManagement = () => {
             </div>
             <h3 className="golant text-[18px] tracking-wide text-[#4a4a4a] mb-2">{leader.name}</h3>
             <h4 className="text-[#003521] text-[16px] tracking-wide uppercase mb-3">{leader.position}</h4>
-
-          <motion.a  
-          onClick={() => handleViewProfile(leader)}
-                        className='mt-4 golant lg:text-[17px] text-center text-[#003521] tracking-wide bg-transparent border hover:border-none hover:text-[#fffced] border-[#003521] rounded-[12px] px-[20px] py-[12px] flex items-center justify-center w-48 group btn-fill-sweep hover:-translate-y-2 transition duration-300 ease-in-out mx-auto lg:mx-0'
-                       initial={{ opacity: 0, x: -60 }}
-                       animate={{ opacity: 1, x: 0 }}
-                       transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
-                              >
-               <span className="group-hover:text-white">Learn More</span>
-             <ArrowUpRight className='ml-2 text-[#003521] group-hover:text-white'/>
-           </motion.a>
+        
+         <FilledButton 
+         onClick={() => handleViewProfile(leader)}
+         text="View Profile"
+         />
           </div>
       ))}
 

@@ -48,7 +48,7 @@ const AboutDetailed = () => {
              <div className='mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 auto-rows-[290px]'>
             <Card className="bg-[linear-gradient(to_bottom,#003521,#00442b_13%,#005434_28%,#006942_48%)] lg:col-span-2  transition duration-300">
             <Target className="w-10 h-10 text-[#fffced] z-10" />
-            <h4 className="text-[#fffced] golant text-2xl">Our Mission</h4>
+            <h4 className="text-[#fffced] pasbile text-lg">Our Mission</h4>
             <p className="text-[#fffced] text-center">
               To provide quality social economic services to all people in th the district through
                active participation of all stakeholders, in order to empower communities and improve the quality of their lives.
@@ -57,7 +57,7 @@ const AboutDetailed = () => {
 
              <Card className="col-span-1 md:col-span-1 lg:col-span-2 border border-[#003521]/30 shadow-md hover:shadow-xl transition duration-300">
            <Eye className="w-10 h-10 text-[#003521]" />
-            <h4 className="text-[#003521] golant text-2xl">Our Vision</h4>
+            <h4 className="text-[#003521] pasbile text-lg">Our Vision</h4>
             <p className="text-[#0b0b0d] text-center leading-relaxed">
               The vision of the council is to be a reliable provider of quality and sustainable socio-economic services.
             </p>
@@ -66,7 +66,7 @@ const AboutDetailed = () => {
 
              <Card className="col-span-1 md:col-span-1 lg:col-span-2 border border-[#003521]/20 shadow-md hover:shadow-xl transition duration-300 z-10">
            <Gem className="w-10 h-10 text-[#003521]" />
-            <h4 className="text-[#003521] golant text-2xl">Core Values</h4>
+            <h4 className="text-[#003521] pasbile text-lg">Core Values</h4>
             <p className="text-[#0b0b0d] text-center leading-relaxed">
               We envision a resilient, thriving Balaka powered by innovation,
               accountability, and people-centered governance.

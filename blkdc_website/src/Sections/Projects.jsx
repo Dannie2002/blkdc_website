@@ -7,6 +7,7 @@ import {
 } from "../Constants/data";
 import ProjectList from "../Components/Projects/ProjectList";
 import aboutimg from "../Assets/images/landingpage.jpg";
+import ContactHeader from '../assets/Images/Contact_us.jpg'
 
 export default function Projects() {
   const tabs = ["All Projects", "Ongoing Projects", "Completed Projects"];
@@ -26,28 +27,18 @@ export default function Projects() {
   const currentContent = getContentByTab(activeCategory);
 
   return (
-    <section className="min-h-screen card-gradient-super">
+    <section className="min-h-screen bg-[radial-gradient(circle_at_top_left,#fdfffb_0%,transparent_60%),radial-gradient(circle_at_bottom_right,#d9d9d9_0%,#fdfffb_0%)]">
       
       {/* Header */}
-      <div
-        className="section-header relative"
-        style={{
-          backgroundImage: `url(${aboutimg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-[#071e07]/60 z-0" />
-
-        <h1 className="text-2xl md:text-3xl lg:text-[22px] worky text-orange mb-3 z-10 relative">
-          Projects Overview
-        </h1>
-
-        <p className="text-center text-[#eceef1] max-w-xl mx-auto px-4 z-10 relative">
-          Explore our ongoing and completed development initiatives across
-          Balaka District.
-        </p>
-      </div>
+       <div className="section-header"style={{ backgroundImage: `url(${ContactHeader})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className="absolute inset-0 bg-[#003521]/70  h-full w-full z-0"/>
+               <h1 className="text-2xl md:text-2xl lg:text-[82px] horizon uppercase text-[#fffced]   mb-3 md:mb-4 z-10">
+                 Projects
+               </h1>
+               <p className="text-[#eceef1] text-base md:text-[16px] max-w-xl mx-auto leading-relaxed px-4 z-10 text-center">
+                 Have some questions? Feel free to contact us. We're here to help and would love to hear from you.
+               </p>
+             </div>
 
       {/* Wrapper */}
       <div className="wrapper px-6 max-w-6xl mx-auto mt-8">
@@ -61,8 +52,8 @@ export default function Projects() {
               className={`px-5 py-2.5 rounded-full text-sm md:text-base transition-all duration-300 backdrop-blur-md border 
                 ${
                   activeCategory === tab
-                    ? "bg-[#828282] border-white/30 text-white shadow-lg"
-                    : "bg-white/10 border-white/10 text-gray-200 hover:bg-white/20"
+                    ? " border-b-[#003521] text-[#003521]"
+                    : "bg-white/10 border-white/10 text-[#4a4a4a] hover:bg-white/20"
                 }`}
             >
               {tab}

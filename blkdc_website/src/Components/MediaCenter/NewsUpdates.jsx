@@ -19,10 +19,10 @@ export default function NewsUpdates({ data }) {
           <div className="relative z-10 px-6 pb-6 pt-24 flex flex-col gap-2">
             <p className="text-xs md:text-sm text-[#f3e8d3] mb-1">{item.date}</p>
             <h3 className="text-xl font-medium pasbile text-white mb-2 line-clamp-2 hover:text-[#6acfce]">{item.title}</h3>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 bg-transparent border border-[#f3e8d3] hover:border-white rounded-[12px] px-4 py-2 w-max mt-4 group">
               <span className="text-[18px] font-semibold text-[#fffced]">Learn More</span>
               <a className=" group transition-colors hover:bg-orange">
-              <ChevronRight className="text-[#35a8c7] group-hover:text-white" />
+              <ChevronRight className="text-[#f7f7f7] group-hover:text-white" />
               </a>
             </div>
           </div>

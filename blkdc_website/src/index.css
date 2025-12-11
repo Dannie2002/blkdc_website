@@ -116,8 +116,8 @@ body {
         background: linear-gradient(90deg, var(--accent-color), #FD9B63);
     }
     .section-header{
-        @apply relative mb-8 md:mb-12 h-66 flex-col items-center justify-center flex bg-no-repeat bg-cover;
-        @apply relative  md:mb-12 h-54 flex-col items-center justify-center flex;
+        @apply relative mb-8 md:mb-12 h-64 flex-col items-center justify-center flex bg-no-repeat bg-cover;
+        @apply relative  md:mb-12 h-[350px] flex-col items-center justify-center flex;
 
     }
     .contact-card{
